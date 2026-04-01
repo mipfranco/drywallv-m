@@ -1,0 +1,372 @@
+:root {
+  --bordo: #7a0000;
+  --verde: #0d3d2a;
+  --bg-light: #faf7f5;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Topbar ===== */
+.topbar {
+  background: blue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 40px;
+  font-size: 0.9rem;
+}
+.topbar a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* ===== Header ===== */
+header {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.logo span {
+  color: var(--bordo);
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.btn-orcamento {
+  background: var(--bordo);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background-image: url(../images/teto\ com\ led\ 4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-left: 60px;
+  max-width: 600px;
+}
+.hero h1 {
+  font-size: 2.7rem;
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+.btn-whatsapp {
+  background: var(--verde);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn-whatsapp:hover {
+  background: var(--bordo);
+}
+
+/* ===== Sections ===== */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 60px;
+  gap: 60px;
+}
+.section.light {
+  background: var(--bg-light);
+}
+.section .text {
+  flex: 1;
+  padding: 20px 40px;
+  line-height: 1.8; /* deixa o texto mais arejado */
+  letter-spacing: 0.3px; /* melhora a leitura */
+  color: #333;
+  max-width: 600px;
+}
+
+.section .text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--bordo);
+  font-weight: 700;
+}
+
+.section .text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: justify; /* deixa o texto alinhado dos dois lados */
+}
+
+.section .text a.btn-whatsapp {
+  display: inline-block;
+  background: var(--bordo);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.section .text a.btn-whatsapp:hover {
+  background: #8b1b2a;
+}
+
+.section .image img {
+  width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ===== Dark Section ===== */
+.dark {
+  flex-direction: column;
+  background: var(--bg-light);
+}
+.header-dark {
+  background: var(--bordo);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  weigt
+}
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+.dark .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background: white;
+  border-radius: 15px;
+  margin-top: -40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Form Section ===== */
+.form-section {
+  background: var(--bg-light);
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 60px;
+  align-items: center;
+}
+.form-content {
+  flex: 1;
+  max-width: 500px;
+}
+.form-content h2 {
+  color: var(--bordo);
+}
+.form-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form input, form button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+form button {
+  background: var(--bordo);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:hover {
+  background: var(--verde);
+}
+.form-image img {
+  width: 300px;
+}
+
+/* ===== WhatsApp Float ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 60px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 40px;
+}
+
+.footer-logo h2 {
+  font-size: 26px;
+  color: #fff;
+}
+.footer-logo span {
+  color: #f1c40f;
+}
+.footer-logo p {
+  margin-top: 10px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  color: #f1c40f;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li {
+  margin-bottom: 8px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+.footer-links a:hover {
+  color: #f1c40f;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+}
+.footer-social img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+}
+.footer-social img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+  font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icons a {
+    display: inline-flex;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.12);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ===== Responsivo ===== */
+@media (max-width: 900px) {
+  header, .section, .dark .content, .form-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content {
+    justify-content: center;
+    text-align: center;
+  }
+  .section .image img, .form-image img {
+    width: 100%;
+  }
+  .btn-orcamento {
+    margin-top: 20px;
+  }
+}
